@@ -6,6 +6,7 @@ namespace Nwilging\LaravelDiscordBot\Support\Traits;
 use Illuminate\Contracts\Events\Dispatcher as EventDispatcher;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Laravel\SerializableClosure\Support\ReflectionClosure;
 use Nwilging\LaravelDiscordBot\Events\AbstractInteractionEvent;
 use Nwilging\LaravelDiscordBot\Support\Interactions\DiscordInteractionResponse;
@@ -20,6 +21,7 @@ trait HasInteractionListeners
     {
         $reflected = new ReflectionClosure($listenerClosure);
         $attributes = $reflected->getStaticVariables();
+        Log::info('Listener attribute:', ['type' => gettype($attributes['listener']), 'value' => $attributes['listener']]);
         return $this->laravel->make($attributes['listener']);
     }
 
