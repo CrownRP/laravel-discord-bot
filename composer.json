@@ -1,6 +1,6 @@
 {
     "name": "crownrp/laravel-discord-bot",
-    "description": "A robust Discord messaging integration for Laravel",
+    "description": "A robust Discord messaging integration for Laravel with support for adding roles",
     "type": "library",
     "license": "MIT",
     "autoload": {
