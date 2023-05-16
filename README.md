@@ -25,7 +25,7 @@ and components that will help you to build rich-text messages as well as handle
 
 ### Install with Composer
 ```
-composer require nwilging/laravel-discord-bot
+composer require crownrp/laravel-discord-bot
 ```
 
 ### Configuration
