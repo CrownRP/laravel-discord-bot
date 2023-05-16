@@ -55,6 +55,22 @@ class DiscordApiService implements DiscordApiServiceContract
         return json_decode($response->getBody()->getContents(), true);
     }
 
+    public function addRoleToMember(string $guildId, string $userId, string $roleId, string $reason = null): void
+    {
+        $options = [];
+        if ($reason) {
+            $options['headers'] = [
+                'X-Audit-Log-Reason' => $reason,
+            ];
+        }
+
+        $this->makeRequest(
+            'PUT',
+            sprintf('guilds/%s/members/%s/roles/%s', $guildId, $userId, $roleId),
+            $options
+        );
+    }
+
     protected function buildMessageOptions(array $options): array
     {
         return [];
