@@ -21,7 +21,7 @@ trait HasInteractionListeners
     {
         $reflected = new ReflectionClosure($listenerClosure);
         $attributes = $reflected->getStaticVariables();
-        Log::info('Listener attribute:', ['type' => gettype($attributes['listener']), 'value' => $attributes['listener']]);
+        Log::info('Listener attribute:', ['type' => gettype($attributes['listener']), 'value' => json_encode($attributes['listener'])]);
         return $this->laravel->make($attributes['listener']);
     }
 
