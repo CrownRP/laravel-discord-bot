@@ -22,16 +22,22 @@ trait HasInteractionListeners
         $reflected = new ReflectionClosure($listenerClosure);
         $attributes = $reflected->getStaticVariables();
         Log::info('Listener attribute:', ['type' => gettype($attributes['listener']), 'value' => $attributes['listener']]);
-        return $this->laravel->make($attributes['listener']);
+        if (is_string($attributes['listener'])) {
+            return $this->laravel->make($attributes['listener']);
+        }
+        return null;
     }
+
 
     protected function getListenersFor(string $eventClass): array
     {
         $listeners = $this->dispatcher->getListeners($eventClass);
-        return array_values(array_map(function (\Closure $listener) {
-            return $this->makeListenerFromClosure($listener);
-        }, $listeners));
+        return array_values(array_filter(array_map(function (\Closure $listener) {
+            $listener = $this->makeListenerFromClosure($listener);
+            return is_object($listener) ? $listener : null;
+        }, $listeners)));
     }
+
 
     protected function defaultBehaviorResponse(array $listeners, $event): DiscordInteractionResponse
     {
