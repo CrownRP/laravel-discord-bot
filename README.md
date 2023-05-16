@@ -2,11 +2,15 @@
 A robust Discord messaging integration for Laravel
 Extended with features to manage guild roles
 
-![Tests](https://github.com/nwilging/laravel-discord-bot/actions/workflows/main-branch.yml/badge.svg?branch=main)
-![Coverage](./.github/coverage-badge.svg)
-[![Latest Stable Version](http://poser.pugx.org/nwilging/laravel-discord-bot/v)](https://packagist.org/packages/nwilging/laravel-discord-bot)
-[![License](http://poser.pugx.org/nwilging/laravel-discord-bot/license)](https://packagist.org/packages/nwilging/laravel-discord-bot)
-[![Total Downloads](http://poser.pugx.org/nwilging/laravel-discord-bot/downloads)](https://packagist.org/packages/nwilging/laravel-discord-bot)
+[//]: # (![Tests]&#40;https://github.com/nwilging/laravel-discord-bot/actions/workflows/main-branch.yml/badge.svg?branch=main&#41;)
+
+[//]: # (![Coverage]&#40;./.github/coverage-badge.svg&#41;)
+
+[//]: # ([![Latest Stable Version]&#40;http://poser.pugx.org/nwilging/laravel-discord-bot/v&#41;]&#40;https://packagist.org/packages/nwilging/laravel-discord-bot&#41;)
+
+[//]: # ([![License]&#40;http://poser.pugx.org/nwilging/laravel-discord-bot/license&#41;]&#40;https://packagist.org/packages/nwilging/laravel-discord-bot&#41;)
+
+[//]: # ([![Total Downloads]&#40;http://poser.pugx.org/nwilging/laravel-discord-bot/downloads&#41;]&#40;https://packagist.org/packages/nwilging/laravel-discord-bot&#41;)
 
 ---
 ### About
