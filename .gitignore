@@ -3,3 +3,11 @@
 .phpunit.result.cache
 tests/html-coverage
 clover.xml
+/.idea/blade.xml
+/.idea/laravel-discord-bot.iml
+/.idea/laravel-idea.xml
+/.idea/laravel-idea-personal.xml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/phpunit.xml
+/.idea/vcs.xml

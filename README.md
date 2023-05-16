@@ -1,5 +1,6 @@
 # Laravel Discord Bot
 A robust Discord messaging integration for Laravel
+Extended with features to manage guild roles
 
 ![Tests](https://github.com/nwilging/laravel-discord-bot/actions/workflows/main-branch.yml/badge.svg?branch=main)
 ![Coverage](./.github/coverage-badge.svg)
