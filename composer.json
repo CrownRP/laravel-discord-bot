@@ -1,5 +1,5 @@
 {
-    "name": "nwilging/laravel-discord-bot",
+    "name": "crownrp/laravel-discord-bot",
     "description": "A robust Discord messaging integration for Laravel",
     "type": "library",
     "license": "MIT",
@@ -13,6 +13,10 @@
         {
             "name": "Nick Wilging",
             "email": "nick@epautomotive.org"
+        },
+        {
+            "name": "Brian van der stel",
+
         }
     ],
     "require": {
