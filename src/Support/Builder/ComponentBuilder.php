@@ -6,6 +6,7 @@ namespace Nwilging\LaravelDiscordBot\Support\Builder;
 use Nwilging\LaravelDiscordBot\Support\Component;
 use Nwilging\LaravelDiscordBot\Support\Components\ActionRow;
 use Nwilging\LaravelDiscordBot\Support\Components\ButtonComponent;
+use Nwilging\LaravelDiscordBot\Support\Components\GenericButtonComponent;
 use Nwilging\LaravelDiscordBot\Support\Components\LinkButtonComponent;
 use Nwilging\LaravelDiscordBot\Support\Components\ParagraphTextInputComponent;
 use Nwilging\LaravelDiscordBot\Support\Components\SelectMenuComponent;
@@ -22,9 +23,9 @@ class ComponentBuilder
         return $this;
     }
 
-    public function addActionButton(string $label, string $customId): self
+    public function addActionButton(string $label, string $customId, int $style = GenericButtonComponent::STYLE_PRIMARY): self
     {
-        $this->components[] = new ButtonComponent($label, $customId);
+        $this->components[] = new ButtonComponent($label, $customId, $style);
         return $this;
     }
 

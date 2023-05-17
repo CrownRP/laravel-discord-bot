@@ -14,9 +14,9 @@ class ButtonComponent extends GenericButtonComponent
 {
     use MergesArrays;
 
-    public function __construct(string $label, string $customId)
+    public function __construct(string $label, string $customId, int $style = GenericButtonComponent::STYLE_PRIMARY)
     {
-        parent::__construct(static::STYLE_PRIMARY, $label, $customId);
+        parent::__construct($style, $label, $customId);
     }
 
     /**
