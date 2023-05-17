@@ -22,10 +22,11 @@ class AuthorEmbed extends Embed
 
     protected ?string $proxyIconUrl = null;
 
-    public function __construct(string $name, ?string $title = null, ?string $description = null, ?string $timestamp = null)
+    public function __construct(string $name, ?string $iconUrl = null, ?string $title = null, ?string $description = null, ?string $timestamp = null)
     {
         parent::__construct($title, $description, $timestamp);
         $this->name = $name;
+        $this->iconUrl = $iconUrl; // Assign the value of $iconUrl to the class property
     }
 
     /**

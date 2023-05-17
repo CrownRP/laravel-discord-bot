@@ -58,9 +58,9 @@ class EmbedBuilder implements EmbedBuilderContract
         return $this;
     }
 
-    public function addAuthor(string $name): self
+    public function addAuthor(string $name, ?string $iconUrl = null): self
     {
-        $this->addEmbed(new AuthorEmbed($name));
+        $this->addEmbed(new AuthorEmbed($name, $iconUrl));
         return $this;
     }
 
