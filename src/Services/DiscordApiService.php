@@ -35,25 +35,18 @@ class DiscordApiService implements DiscordApiServiceContract
 
     public function sendRichTextMessage(string $channelId, array $embeds, array $components = [], array $options = []): array
     {
-        $embedArrays = array_map(function (Embed $embed): array {
-            return $embed->toArray();
-        }, $embeds);
-
-        $componentArrays = array_map(function (Component $component): array {
-            return $component->toArray();
-        }, $components);
-
         $response = $this->makeRequest(
             'POST',
             sprintf('channels/%s/messages', $channelId),
             array_merge($this->buildMessageOptions($options), [
-                'embeds' => $embedArrays,
-                'components' => $componentArrays,
+                'embeds' => $embeds,
+                'components' => $components,
             ]),
         );
 
         return json_decode($response->getBody()->getContents(), true);
     }
+
 
     public function addRoleToMember(string $guildId, string $userId, string $roleId, string $reason = null): void
     {

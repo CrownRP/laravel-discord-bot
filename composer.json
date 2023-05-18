@@ -23,7 +23,8 @@
         "ext-sodium": "*",
         "php": ">=7.4",
         "laravel/framework": ">=8",
-        "guzzlehttp/guzzle": "^7.4"
+        "guzzlehttp/guzzle": "^7.4",
+      "ext-json": "*"
     },
     "extra": {
         "laravel": {
