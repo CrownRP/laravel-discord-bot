@@ -41,6 +41,8 @@ class DiscordInteractionService implements DiscordInteractionServiceContract
         $this->validate($request);
         $json = $request->json()->all();
 
+        Log::info('Interaction JSON data:', $json);
+
         $handlerClass = $this->interactionHandlers[$json['type']] ?? null;
         if (!$handlerClass) {
             throw new NotFoundHttpException();
